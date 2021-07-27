@@ -19,7 +19,7 @@ class Product with ChangeNotifier {
       this.isFavorite = false});
 
   void _setFavValue(bool newValue) {
-    isFavorite = oldStatus;
+    isFavorite = newValue;
     notifyListeners();
   }
 
