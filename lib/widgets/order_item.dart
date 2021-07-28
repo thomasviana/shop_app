@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:shop_app/providers/orders.dart' as ord;
 import 'package:shop_app/widgets/order_item.dart';
+import 'package:shop_app/widgets/cart_item.dart';
 
 class OrderItem extends StatefulWidget {
   final ord.OrderItem order;
@@ -45,6 +46,7 @@ class _OrderItemState extends State<OrderItem> {
                 children: widget.order.products
                     .map(
                       (prod) => Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             prod.title,
@@ -54,7 +56,7 @@ class _OrderItemState extends State<OrderItem> {
                             ),
                           ),
                           Text(
-                            '${prod.quiantity}x \$${prod.price}',
+                            '${prod.quantity}x \$${prod.price}',
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.grey,
