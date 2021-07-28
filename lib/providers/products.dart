@@ -65,7 +65,7 @@ class Products with ChangeNotifier {
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
-        print(json.decode(response.body));
+        // print(json.decode(response.body));
       } else {
         print(response.statusCode);
       }
@@ -92,6 +92,7 @@ class Products with ChangeNotifier {
         );
       });
       _items = loadedProducts;
+
       notifyListeners();
     } catch (error) {
       throw (error);
