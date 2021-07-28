@@ -3,8 +3,6 @@ import 'package:intl/intl.dart';
 import 'dart:math';
 
 import 'package:shop_app/providers/orders.dart' as ord;
-import 'package:shop_app/widgets/order_item.dart';
-import 'package:shop_app/widgets/cart_item.dart';
 
 class OrderItem extends StatefulWidget {
   final ord.OrderItem order;
